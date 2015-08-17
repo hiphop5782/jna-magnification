@@ -79,7 +79,7 @@ public class screenSkip {
 
             public boolean MagImageScalingCallback(HWND hwnd, Pointer srcdata,
                     MAGIMAGEHEADER.ByValue srcheader, Pointer destdata,
-                    MAGIMAGEHEADER.ByValue destheader, RECT source, RECT clipped, HRGN dirty) {
+                    MAGIMAGEHEADER.ByValue destheader, RectByValue source, RectByValue clipped, HRGN dirty) {
                 image.setRGB(0, 0, srcheader.width, srcheader.height, srcdata.getIntArray(0, srcheader.width * srcheader.height ), 0, srcheader.width);
                 return true;
             }

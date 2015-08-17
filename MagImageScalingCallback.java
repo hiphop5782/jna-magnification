@@ -11,7 +11,7 @@ public interface MagImageScalingCallback extends StdCallLibrary.StdCallCallback 
 				MAGIMAGEHEADER.ByValue srcheader,
 				Pointer destdata,
 				MAGIMAGEHEADER.ByValue destheader,
-				RECT source,
-				RECT clipped,
+				RectByValue source,
+				RectByValue clipped,
 				HRGN dirty);
 }
